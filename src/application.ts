@@ -61,12 +61,12 @@ export class CustomApplication extends BootMixin(
     // ------------- END OF SNIPPET -------------
 
     // Bind user service
-    this.bind(UserServiceBindings.USER_SERVICE).toClass(CustomUserService),
+    this.bind(UserServiceBindings.USER_SERVICE).toClass(CustomUserService) // errpr on this line
 
-      // Bind user and credentials repository
-      this.bind(UserServiceBindings.USER_REPOSITORY).toClass(
-        UserRepository,
-      ),
+    // Bind user and credentials repository
+    this.bind(UserServiceBindings.USER_REPOSITORY).toClass(
+      UserRepository,
+    ),
 
       this.bind(UserServiceBindings.USER_CREDENTIALS_REPOSITORY).toClass(
         UserCredRepository,
